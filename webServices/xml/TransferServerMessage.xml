@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serverMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ServerMessage.xsd">
+   <correlation>MessageCorrelation</correlation>
+   <messageProperty>
+      <sender>GEDTransferServiceTest</sender>
+      <sendingDate>2012-07-30</sendingDate>
+   </messageProperty>
+   <serviceConfiguration>
+      <name>GEDCustomerTransferService</name>
+      <parameters>
+         <customerTransferMessage>
+            <contractId>4899239</contractId>
+         </customerTransferMessage>
+      </parameters>
+   </serviceConfiguration>
+</serverMessage>

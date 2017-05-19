@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xml:lang="en" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+   jxb:version="2.1">
+   <xsd:annotation>
+      <xsd:appinfo>
+         <jxb:globalBindings collectionType="java.util.ArrayList">
+         </jxb:globalBindings>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element name="serverMessage">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="correlation" minOccurs="1" maxOccurs="1" type="xsd:string" />
+            <xsd:element name="messageProperty" minOccurs="1" maxOccurs="1" type="MessageProperty" />
+            <xsd:element ref="serviceConfiguration" minOccurs="1" maxOccurs="1" />
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+
+   <xsd:complexType name="MessageProperty">
+      <xsd:sequence>
+         <xsd:element name="sender" type="xsd:string" minOccurs="1" maxOccurs="1" />
+         <xsd:element name="sendingDate" type="xsd:date" minOccurs="1" maxOccurs="1" />
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="serviceConfiguration">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="parameters" minOccurs="1" maxOccurs="1">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:any minOccurs="0" />
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+
+</xsd:schema>

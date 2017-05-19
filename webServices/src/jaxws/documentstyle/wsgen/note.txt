@@ -1,0 +1,8 @@
+----------------------------------------
+1.Java Web Service Client via wsgen tool
+----------------------------------------
+Where is wsgen? This wsgen tool is bundle with the JDK, you can find it at "JDK_PATH/bin" folder.
+wsgen command: wsgen -keep -cp . jaxws.documentstyle.ws.DocumentImpl
+Please see these files in package wsgen.
+
+Note: command wsgen works only u have jaxws.documentstyle.ws.DocumentImpl.class(after compile javac)

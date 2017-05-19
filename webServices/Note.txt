@@ -1,0 +1,37 @@
+===========
+1.)wsimport	
+===========
+Published wsdl file, and generate necessary client files (stub) to access the published web service.
+
+Dos command:
+------------
+wsimport -keep http://localhost:9999/ws/hello?wsdl -p jaxws.documentstyle.ws.wsimport
+
+===========
+2.)wsgen	
+===========
+Document style requires extra classes to run, you can use “wsgen” to generate all necessary Java artifacts (mapping classes, wsdl or xsd schema). 
+The “wsgen” command is required to read a service endpoint implementation class :
+
+wsgen -keep -cp . com.mkyong.ws.HelloWorldImpl
+
+Generate wsdl, xsd file:
+------------------------
+wsgen -verbose -keep -cp . jaxws.documentstyle.ws.DocumentImpl -wsdl
+
+===========
+JIBX:(not work yet)
+===========
+java -cp .\lib\jibx-tools-1.2.5.jar;.\lib\jibx-bind-1.2.5.jar;.\lib\jibx-schema-1.2.5.jar;.\lib\jibx-run-1.2.5.jar;.\lib\log4j-1.2.17.jar;.\lib\kxml2-2.3.0.jar;.\lib\jibx-extras-1.2.5.jar;.\lib\core-3.3.0-v_771.jar;.\lib\bcel-5.2.jar;.\lib\runtime-3.3.100-v20070530.jar org.jibx.schema.codegen.CodeGen xsd\ServerMessage.xsd
+
+===========
+Jaxb:
+===========
+DOS command to generate java class: xjc ServerMessage.xsd
+
+==============================
+new generation of SOAP stacks:
+==============================
+Apache Axis2
+Apache CXF
+Metro : metro.java.net

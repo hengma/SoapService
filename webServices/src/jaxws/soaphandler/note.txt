@@ -1,0 +1,9 @@
+1.) Before run SoapHandlerPublisher.java
+--> Modify handler-chain.xml:
+...
+<javaee:handler-class>jaxws.soaphandler.handler.MacAddressValidatorHandler</javaee:handler-class>
+...
+
+2.) To test handler client side
+--> Modify handler-chain.xml
+<javaee:handler-class>jaxws.soaphandler.handler.MacAddressValidatorHandlerClient</javaee:handler-class>

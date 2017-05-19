@@ -1,0 +1,8 @@
+-------------------------------------------
+1.Java Web Service Client via wsimport tool
+-------------------------------------------
+Where is wsimport? This wsimport tool is bundle with the JDK, you can find it at "JDK_PATH/bin" folder.
+wsimport command: wsimport -keep http://localhost:9999/ws/hello?wsdl
+==> It will generate necessary client files, which is depends on the provided wsdl file. 
+In this case, it will generate one interface and one service implementation files. 
+Please see these files in package wsimportfiles.
